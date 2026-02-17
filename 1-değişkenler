@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    public class Program
+    {
+       public static void Main(string[] args)
+        {
+            //int a = 4; 
+            //int b = 5;
+            //Console.WriteLine($" iki sayının toplamı = { a + b}");
+            //Console.WriteLine($"birinci sayi {a}, ikinci sayi {b}");
+            //Console.ReadKey();
+
+         
+SORU : Klavyeden girilen a sayısının yine klavyeden girilen b sayısına tam bölünüp bölünmediğini bulan kodu
+c# ile kodlayınız
+            Console.Write("a sayısını giriniz:");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("b sayısını giriniz:");
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            if(b == 0)
+            {
+                Console.WriteLine("Bir sayı 0'a bölünemez.");
+            }
+            else if(a % b == 0)
+            { 
+                Console.Write("a sayısı b sayısına tam bölünür.");
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("a sayısı b sayısına tam bölünemez.");
+            }
+
+        }
+    }
+}
