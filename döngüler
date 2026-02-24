@@ -1,0 +1,95 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            //int a = 4; 
+            //int b = 5;
+            //Console.WriteLine($" iki sayının toplamı = { a + b}");
+            //Console.WriteLine($"birinci sayi {a}, ikinci sayi {b}");
+            //Console.ReadKey();
+
+
+            // SORU: Klavyeden girilen a sayısının yine klavyeden girilen b sayısına tam bölünüp bölünmediğini bulan kodu c# ile kodlayınız
+
+            //Console.Write("a sayısını giriniz:");
+            //int a = Convert.ToInt32(Console.ReadLine());
+
+            //Console.Write("b sayısını giriniz:");
+            //int b = Convert.ToInt32(Console.ReadLine());
+
+            //if (b == 0)
+            //{
+            //    Console.WriteLine("Bir sayı 0'a bölünemez.");
+            //}
+            //else if (a % b == 0)
+            //{
+            //    Console.Write("a sayısı b sayısına tam bölünür.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Kalan Sayı: " + a%b);
+            //}
+            //SORU: Üç sayıdan en büyüğünü bulan program
+
+
+            /*Console.Write("sayi1 sayısını giriniz:");
+            int sayi1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("sayi2 sayısını giriniz:");
+            int sayi2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("sayi3 sayısını giriniz:");
+            int sayi3 = Convert.ToInt32(Console.ReadLine());
+
+            if (sayi1 > sayi2 && sayi1 > sayi3)
+            {
+                Console.WriteLine("Sayi1 en büyük sayidir.");
+                Console.ReadKey();
+            }
+            else if (sayi2 > sayi3 && sayi2 > sayi1)
+            {
+                Console.WriteLine("Sayi2 en büyüktür");
+                Console.ReadKey();
+            }
+            else if (sayi3 > sayi2 && sayi3 > sayi1)
+            {
+                Console.WriteLine("Sayi3 en büyüktür");
+                Console.ReadKey();
+
+
+            }
+            int x, y;
+            if(x== y)
+            {
+
+            }
+
+            if (x === y)
+            {
+
+            }
+        }   
+    }*/
+
+            Console.Write("A kenari giriniz: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("B kenari giriniz: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int c;
+            double karekok;
+
+            c = a^2 + b^2;
+            karekok= Math.Sqrt(c);
+            Console.WriteLine(karekok);
+            Console.ReadKey();
+        }
+    }
+}
