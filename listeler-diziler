@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> asal = new List<int>();
+
+            asal.Add(2);
+            asal.Add(3);
+            asal.Add(5);
+            asal.Add(7);
+            asal.Add(11);
+            asal.Add(13);
+            asal.Add(17);
+            asal.Add(19);
+            asal.Add(23);
+            asal.Add(29);
+
+            Console.WriteLine("ilk 10 asal sayilar");
+            foreach(int sayi in asal)
+            {
+                Console.WriteLine(sayi);
+            }
+            Console.ReadKey();
+        }
+
+      }
+}
