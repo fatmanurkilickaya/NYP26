@@ -1,0 +1,38 @@
+ static bool AsalMi(int sayi)
+ {
+     if (sayi < 2) return false;
+
+     for (int i = 2; i * i <= sayi; i++)
+     {
+         if (sayi % i == 0) return false;
+     }
+     return true;
+ }
+
+ static void Main(string[] args)
+ {
+     Console.WriteLine("bir sayi giriniz");
+     string giris = Console.ReadLine();
+
+     if (!int.TryParse(giris, out int n))
+     {
+         Console.WriteLine("Hatalı giriş yaptınız");
+         return;
+     }
+
+     if (n < 2)
+     {
+         Console.WriteLine("2 den küçük bir sayı girdiniz");
+         return;
+     }
+
+     for (int sayi = 2; sayi <= n; sayi++)
+     {
+         if (AsalMi(sayi))
+             Console.Write(sayi);
+     }
+
+     Console.ReadKey();
+
+
+ }
