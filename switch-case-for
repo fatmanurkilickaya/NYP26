@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //SORU: Kullanicinin secimine gore haftanin gununu soyleyen program
+
+            //Console.WriteLine("1-7 arasında bir sayı giriniz (pzt:1..pazar:7)");
+            //int secim = Convert.ToInt32( Console.ReadLine());
+
+
+            //switch (secim) 
+            //{
+            //    case 1: Console.WriteLine("Bugün pazartesi"); break;
+            //    case 2: Console.WriteLine("Bugün salı"); break;
+            //    case 3: Console.WriteLine("Bugün çarşamba"); break;
+            //    case 4: Console.WriteLine("Bugün perşembe"); break;
+            //    case 5: Console.WriteLine("Bugün cuma"); break;
+            //    case 6: Console.WriteLine("Bugün cumartesi"); break;
+            //    case 7: Console.WriteLine("Bugün pazar"); break;
+            //    default: Console.WriteLine("Hatalı seçim"); break;
+
+            //}
+
+            //Console.ReadKey();
+
+        // SORU: Girilen sayiya kadar olan asal sayilari listeleyen program
+            //Console.WriteLine("Bir sayı giriniz");
+            //int n = Convert.ToInt32(Console.ReadLine());
+
+            //for (int i = 2; i <= n; i++)
+            //{
+            //    if (n % i == 1)
+            //    {
+            //        Console.WriteLine($"{n} Sayısı asaldır");
+            //        break;
+
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"{n} sayısı asal değildir");
+            //        break;
+            //    }
+                
+            //}
+
+            //Console.ReadKey();
+
+        }
+    }
+}
