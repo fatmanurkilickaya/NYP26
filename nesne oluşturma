@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    public class Kutuphane
+    {
+        string isim, adres; // global değişken
+        
+        public void SetKutuphane(string name, string address)
+        {
+           this.isim = name;
+           this.adres = address;
+        }
+
+        public bool IsKutuphane()
+        {
+            bool found = false;
+            if (string.IsNullOrEmpty(this.isim)) found = false;
+            else  found=true;
+            return found;
+
+        }
+
+        public void IsimGetir()
+        {
+            Console.WriteLine("Kutuphane ismi: "+ this.isim);
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Kutuphane k = new Kutuphane();
+            k.SetKutuphane("KAYU", "kayseri");
+            k.IsimGetir();
+            Console.ReadKey();
+        }
+    }
+
+   
+}
+
