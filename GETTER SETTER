@@ -1,0 +1,185 @@
+using System;
+using System.Collections.Generic;
+
+class Kisi
+{
+    private string ad;
+    private string soyad;
+    private int dogumYili;
+    private string tcKimlikNo;
+
+    public string Ad
+    {
+        get { return ad; }
+        set { ad = value; }
+    }
+
+    public string Soyad
+    {
+        get { return soyad; }
+        set { soyad = value; }
+    }
+
+    public int DogumYili
+    {
+        get { return dogumYili; }
+        set { dogumYili = value; }
+    }
+
+    public string TCKimlikNo
+    {
+        get { return tcKimlikNo; }
+        set { tcKimlikNo = value; }
+    }
+
+    public List<Arac> Araclar = new List<Arac>();
+
+    public void ArabalarimiListele()
+    {
+        Console.WriteLine("\nKİŞİ ARABALARIMI LİSTELE");
+        Console.WriteLine("------------------------");
+
+        foreach (Arac arac in Araclar)
+        {
+            Console.WriteLine("Şasi Numarası: " + arac.SasiNo);
+            Console.WriteLine("Sahibi: " + Ad + " " + Soyad);
+            Console.WriteLine("Edinme Tarihi: " + arac.EdinmeTarihi.ToString("dd.MM.yyyy"));
+            Console.WriteLine("Model Yılı: " + arac.Yil);
+            Console.WriteLine("Marka: " + arac.Marka);
+            Console.WriteLine("Model: " + arac.Model);
+            Console.WriteLine("Araç Türü: " + arac.AracTuru);
+            Console.WriteLine("Edinme Fiyatı: " + arac.EdinmeFiyati);
+            Console.WriteLine("Bu aracın " + arac.KacinciSahibi + ". sahibisiniz.");
+            Console.WriteLine("------------------------");
+        }
+    }
+}
+
+class Arac
+{
+    private string aracTuru;
+    private string model;
+    private int yil;
+    private string marka;
+    private DateTime edinmeTarihi;
+    private double edinmeFiyati;
+    private string sasiNo;
+    private int kacinciSahibi;
+
+    public string AracTuru
+    {
+        get { return aracTuru; }
+        set { aracTuru = value; }
+    }
+
+    public string Model
+    {
+        get { return model; }
+        set { model = value; }
+    }
+
+    public int Yil
+    {
+        get { return yil; }
+        set { yil = value; }
+    }
+
+    public string Marka
+    {
+        get { return marka; }
+        set { marka = value; }
+    }
+
+    public DateTime EdinmeTarihi
+    {
+        get { return edinmeTarihi; }
+        set { edinmeTarihi = value; }
+    }
+
+    public double EdinmeFiyati
+    {
+        get { return edinmeFiyati; }
+        set { edinmeFiyati = value; }
+    }
+
+    public string SasiNo
+    {
+        get { return sasiNo; }
+        set { sasiNo = value; }
+    }
+
+    public int KacinciSahibi
+    {
+        get { return kacinciSahibi; }
+        set { kacinciSahibi = value; }
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Kisi kisi = new Kisi();
+
+        Console.Write("Adınızı giriniz: ");
+        kisi.Ad = Console.ReadLine();
+
+        Console.Write("Soyadınızı giriniz: ");
+        kisi.Soyad = Console.ReadLine();
+
+        Console.Write("Doğum yılınızı giriniz: ");
+        kisi.DogumYili = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("TC Kimlik Numaranızı giriniz: ");
+        kisi.TCKimlikNo = Console.ReadLine();
+
+        Arac arac1 = new Arac();
+        arac1.AracTuru = "Taksi";
+        arac1.Marka = "Toyota";
+        arac1.Model = "Corolla";
+        arac1.Yil = 2018;
+        arac1.EdinmeTarihi = new DateTime(2022, 5, 10);
+        arac1.EdinmeFiyati = 650000;
+        arac1.SasiNo = "A1B2C3";
+        arac1.KacinciSahibi = 4;
+
+        Arac arac2 = new Arac();
+        arac2.AracTuru = "Kamyon";
+        arac2.Marka = "Ford";
+        arac2.Model = "Cargo";
+        arac2.Yil = 2016;
+        arac2.EdinmeTarihi = new DateTime(2021, 8, 15);
+        arac2.EdinmeFiyati = 900000;
+        arac2.SasiNo = "D4E5F6";
+        arac2.KacinciSahibi = 5;
+
+        Arac arac3 = new Arac();
+        arac3.AracTuru = "Otobüs";
+        arac3.Marka = "Mercedes";
+        arac3.Model = "Travego";
+        arac3.Yil = 2020;
+        arac3.EdinmeTarihi = new DateTime(2023, 1, 20);
+        arac3.EdinmeFiyati = 1500000;
+        arac3.SasiNo = "G7H8I9";
+        arac3.KacinciSahibi = 6;
+
+        Arac arac4 = new Arac();
+        arac4.AracTuru = "Minibüs";
+        arac4.Marka = "Fiat";
+        arac4.Model = "Ducato";
+        arac4.Yil = 2019;
+        arac4.EdinmeTarihi = new DateTime(2020, 11, 3);
+        arac4.EdinmeFiyati = 700000;
+        arac4.SasiNo = "J1K2L3";
+        arac4.KacinciSahibi = 3;
+
+        kisi.Araclar.Add(arac1);
+        kisi.Araclar.Add(arac2);
+        kisi.Araclar.Add(arac3);
+        kisi.Araclar.Add(arac4);
+
+        kisi.ArabalarimiListele();
+
+        Console.ReadLine();
+    }
+}
