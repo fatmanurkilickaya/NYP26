@@ -1,0 +1,76 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CokgenHesaplama
+{
+    public class program
+    {
+        static void Main(string[] args)
+        {
+            kare kare1 = new kare();
+            kare1.kenar = 5;
+            kare1.karehesapla();
+            dikdörtgen dikdörtgen1 = new dikdörtgen();
+            dikdörtgen1.genislik = 4;
+            dikdörtgen1.yükseklik = 6;
+            dikdörtgen1.dikdörtgenhesapla();
+            Console.ReadKey();
+
+        }
+    }
+   
+
+   public class cokgenhesaplama
+    {
+        public void AlanHesapla(int w, int l)
+        {
+            Console.WriteLine("cokgenin alanı" + w * l);
+        }
+        public void cevrehesapla(int w, int l)
+        {
+            Console.WriteLine("cokgenin cevresi"+ (w*2+l*2));
+         
+        }
+
+
+        public int kenar;
+        public int genislik, yükseklik;
+        public int cevre;
+
+
+    }
+    public class kare: cokgenhesaplama
+    {
+        public void karehesapla()
+
+        {
+            AlanHesapla(kenar, kenar);
+            cevrehesapla(kenar, kenar);
+
+            int cevre = kenar * 4;
+            Console.WriteLine("karenin cevresi" + cevre);
+            Console.WriteLine("karenin alanı" + (kenar * kenar));
+        
+        }
+       
+    }
+    public class dikdörtgen : cokgenhesaplama
+    {
+        public void dikdörtgenhesapla()
+
+        {
+            AlanHesapla(genislik, yükseklik);
+            cevrehesapla(genislik, yükseklik);
+            Console.WriteLine("diktörtgenin cevresi"+(genislik*2+yükseklik*2));
+            Console.WriteLine("diktörgenbin alanı" + (genislik * yükseklik));
+        
+        
+        }
+   
+    }
+  
+}
